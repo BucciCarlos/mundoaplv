@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "¿Qué es la APLV? Guía completa para padres - Mundo APLV" %}{% endblock %}
+{% block meta_description %}{% trans "Entiende la Alergia a la Proteína de la Leche de Vaca: causas, tipos de reacciones (IgE y No-IgE) y cómo afecta a los lactantes." %}{% endblock %}
+
+{% block content %}
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="section-title text-center">{% trans "¿Qué es la APLV?" %}</h2>
+            
+            <div class="space-y-6 text-lg text-slate-700 text-left">
+                <p>
+                    {% trans "La Alergia a la Proteína de la Leche de Vaca (APLV) es una respuesta anormal del sistema inmunitario. En los niños que la padecen, las defensas del cuerpo identifican erróneamente a las proteínas de la leche como sustancias dañinas (alérgenos)." %}
+                </p>
+
+                <div class="alert-aplv my-8">
+                    <p class="font-semibold italic">
+                        {% trans "¿Sabías que la APLV no es lo mismo que la intolerancia a la lactosa? Mientras la intolerancia es un problema digestivo (falta de una enzima), la APLV es un problema del sistema inmunológico." %}
+                    </p>
+                </div>
+
+                <h3 class="text-2xl font-bold text-health-blue pt-4 text-center">{% trans "Tipos de Reacciones" %}</h3>
+                <p>
+                    {% trans "Existen dos tipos principales dependiendo de cómo reacciona el cuerpo:" %}
+                </p>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li>
+                        <strong>{% trans "Mediada por IgE:" %}</strong> {% trans "Los síntomas aparecen casi inmediatamente (segundos a minutos) después de la ingesta. Puede causar urticaria, hinchazón o anafilaxia." %}
+                    </li>
+                    <li>
+                        <strong>{% trans "No mediada por IgE:" %}</strong> {% trans "Los síntomas son tardíos (horas o días después). Suele afectar principalmente al sistema digestivo (vómitos, diarrea, sangre en heces)." %}
+                    </li>
+                </ul>
+
+                <div class="bg-primary-light p-6 rounded-2xl border border-primary border-opacity-20 mt-8">
+                    <h4 class="font-bold text-primary-dark mb-2 text-center md:text-left">{% trans "Dato Clave" %}</h4>
+                    <p class="text-sm">
+                        {% trans "Es la alergia alimentaria más frecuente en los primeros meses de vida, afectando a lactantes tanto con lactancia materna como con fórmula." %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="{% url 'index' %}" class="btn-primary">
+                    {% trans "Volver al Inicio" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

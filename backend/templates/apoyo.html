@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Grupos de Apoyo y Comunidad APLV - Mundo APLV" %}{% endblock %}
+{% block meta_description %}{% trans "No estás solo. Conecta con otros padres, grupos de apoyo y asociaciones para compartir experiencias y consejos sobre la APLV." %}{% endblock %}
+
+{% block content %}
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="section-title text-center">{% trans "Comunidad y Apoyo" %}</h2>
+            
+            <div class="mb-12 text-left">
+                <p class="text-lg text-slate-600">
+                    {% trans "El camino de la APLV es más fácil cuando se transita en compañía. Aquí encontrarás recursos para conectar con otras familias." %}
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="card-aplv text-left">
+                    <h3 class="text-xl font-bold text-health-blue mb-4">{% trans "Asociaciones Nacionales" %}</h3>
+                    <p class="text-sm text-slate-600 mb-4">
+                        {% trans "Organizaciones dedicadas a la defensa de los derechos de pacientes con alergias alimentarias y difusión de información oficial." %}
+                    </p>
+                    <a href="#" class="text-primary font-bold hover:underline italic">{% trans "Ver asociaciones recomendadas" %}</a>
+                </div>
+
+                <div class="card-aplv text-left">
+                    <h3 class="text-xl font-bold text-health-blue mb-4">{% trans "Grupos de Padres" %}</h3>
+                    <p class="text-sm text-slate-600 mb-4">
+                        {% trans "Redes sociales y grupos de WhatsApp donde padres comparten recetas, alertas de productos y apoyo emocional." %}
+                    </p>
+                    <a href="#" class="text-primary font-bold hover:underline italic">{% trans "Unirse a la comunidad" %}</a>
+                </div>
+            </div>
+
+            <div class="alert-aplv mb-12 text-left">
+                <h4 class="font-bold mb-2">{% trans "¿Necesitas hablar?" %}</h4>
+                <p>{% trans "Si te sientes abrumado por el diagnóstico, recuerda que es una etapa de transición. Busca apoyo profesional si la ansiedad afecta tu día a día." %}</p>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="{% url 'index' %}" class="btn-primary">
+                    {% trans "Volver al Inicio" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Diagnóstico de APLV: El camino hacia la detección - Mundo APLV" %}{% endblock %}
+
+{% block content %}
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="section-title">{% trans "Proceso de Diagnóstico" %}</h2>
+            
+            <div class="mb-12 text-left">
+                <p class="text-lg text-slate-600">
+                    {% trans "Llegar a un diagnóstico correcto de APLV es un proceso que requiere paciencia y la guía de un especialista. No existen pruebas únicas definitivas, sino una combinación de métodos." %}
+                </p>
+            </div>
+
+            <!-- Diagnostic Timeline -->
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-slate-200">
+                
+                <!-- Step 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-sm font-bold">
+                        1
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card-aplv !py-4 text-left">
+                        <h3 class="font-bold text-health-blue mb-1">{% trans "Historial Médico y Examen" %}</h3>
+                        <p class="text-sm text-slate-600">{% trans "El primer paso es una revisión detallada de los síntomas, antecedentes familiares y patrones de alimentación." %}</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-sm font-bold">
+                        2
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card-aplv !py-4 text-left">
+                        <h3 class="font-bold text-health-blue mb-1">{% trans "Pruebas Específicas" %}</h3>
+                        <p class="text-sm text-slate-600">{% trans "Se pueden realizar pruebas cutáneas (Prick Test), parches o análisis de sangre para medir anticuerpos IgE." %}</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-sm font-bold">
+                        3
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card-aplv !py-4 text-left">
+                        <h3 class="font-bold text-health-blue mb-1">{% trans "Dieta de Exclusión" %}</h3>
+                        <p class="text-sm text-slate-600">{% trans "Si se sospecha APLV, se retira totalmente la proteína de la leche de vaca de la dieta (del niño o de la madre si amamanta) por 2-4 semanas." %}</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-sm font-bold">
+                        4
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card-aplv !py-4 text-left">
+                        <h3 class="font-bold text-health-blue mb-1">{% trans "Prueba de Provocación" %}</h3>
+                        <p class="text-sm text-accent font-semibold">{% trans "Bajo estricta supervisión médica" %}</p>
+                        <p class="text-sm text-slate-600">{% trans "Consiste en reintroducir gradualmente la leche para confirmar si los síntomas reaparecen. Es la prueba de oro para el diagnóstico." %}</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="alert-aplv mt-16 text-left">
+                <p class="font-bold text-lg md:text-xl text-health-blue">
+                    {% trans "Importante: Nunca realice una prueba de provocación en casa sin indicación médica, especialmente si ha habido antecedentes de reacciones severas." %}
+                </p>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <a href="{% url 'index' %}" class="btn-primary">
+                    {% trans "Volver al Inicio" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

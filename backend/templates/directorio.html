@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Directorio de Especialistas en Alergias Alimentarias - Mundo APLV" %}{% endblock %}
+{% block meta_description %}{% trans "Encuentra pediatras, alergistas y nutricionistas especializados en APLV para un seguimiento profesional y seguro." %}{% endblock %}
+
+{% block content %}
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="section-title text-center">{% trans "Directorio Médico" %}</h2>
+            
+            <div class="mb-12 text-left">
+                <p class="text-lg text-slate-600">
+                    {% trans "El seguimiento multidisciplinario es la clave del éxito. Aquí te ayudamos a identificar a los profesionales que tu hijo necesita." %}
+                </p>
+            </div>
+
+            <div class="space-y-6 mb-12 text-left">
+                <div class="card-aplv flex items-start gap-4">
+                    <div class="text-3xl">🩺</div>
+                    <div>
+                        <h3 class="font-bold text-health-blue">{% trans "Alergista e Inmunólogo" %}</h3>
+                        <p class="text-sm text-slate-600">{% trans "Especialista en realizar las pruebas cutáneas y de sangre, y dirigir la prueba de provocación." %}</p>
+                    </div>
+                </div>
+
+                <div class="card-aplv flex items-start gap-4">
+                    <div class="text-3xl">🥦</div>
+                    <div>
+                        <h3 class="font-bold text-health-blue">{% trans "Nutricionista Especializado" %}</h3>
+                        <p class="text-sm text-slate-600">{% trans "Asegura que la dieta de exclusión sea nutricionalmente completa para evitar deficiencias de crecimiento." %}</p>
+                    </div>
+                </div>
+
+                <div class="card-aplv flex items-start gap-4">
+                    <div class="text-3xl">👶</div>
+                    <div>
+                        <h3 class="font-bold text-health-blue">{% trans "Pediatra de Cabecera" %}</h3>
+                        <p class="text-sm text-slate-600">{% trans "Coordina el cuidado general y monitorea el desarrollo físico del niño." %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-aplv bg-primary bg-opacity-5 border-primary text-left">
+                <p class="text-sm">
+                    {% trans "Próximamente: Estamos trabajando en un directorio geolocalizado para ayudarte a encontrar centros de salud en tu ciudad." %}
+                </p>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <a href="{% url 'index' %}" class="btn-primary">
+                    {% trans "Volver al Inicio" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

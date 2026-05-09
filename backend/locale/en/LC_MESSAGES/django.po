@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-08 20:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Mundo APLV - Alergia a la Proteína de la Leche de Vaca"
+msgstr "Mundo APLV - Allergy to Cow's Milk Protein"
+
+msgid "Inicio"
+msgstr "Home"
+
+msgid "Información"
+msgstr "Information"
+
+msgid "Recursos"
+msgstr "Resources"
+
+msgid "Contacto"
+msgstr "Contact"
+
+msgid "Información con fines educativos. Consulta siempre con tu médico."
+msgstr "Information for educational purposes. Always consult your doctor."
+
+msgid "Mundo APLV"
+msgstr "Mundo APLV"
+
+msgid "Aprende Más"
+msgstr "Learn More"
+
+msgid "En caso de reacción alérgica severa, contacta inmediatamente a servicios de emergencia"
+msgstr "In case of severe allergic reaction, contact emergency services immediately"
+
+msgid "¿Qué es APLV?"
+msgstr "What is CMPA?"
+
+msgid "La Alergia a la Proteína de la Leche de Vaca es una reacción inmunológica adversa a las proteínas presentes en la leche de vaca, afectando principalmente a bebés y niños pequeños."
+msgstr "Cow's Milk Protein Allergy is an adverse immune reaction to proteins present in cow's milk, mainly affecting babies and young children."
+
+msgid "Más Info"
+msgstr "More Info"
+
+msgid "Síntomas"
+msgstr "Symptoms"
+
+msgid "Los síntomas pueden incluir erupciones cutáneas, problemas digestivos, vómitos, diarrea, y en casos severos, anafilaxia. La identificación temprana es crucial."
+msgstr "Symptoms can include skin rashes, digestive problems, vomiting, diarrhea, and in severe cases, anaphylaxis. Early identification is crucial."
+
+msgid "Alternativas"
+msgstr "Alternatives"
+
+msgid "Existen múltiples opciones como fórmulas hidrolizadas, leches vegetales fortificadas y productos libres de lácteos para mantener una nutrición adecuada."
+msgstr "There are multiple options such as hydrolyzed formulas, fortified plant-based milks, and dairy-free products to maintain proper nutrition."
+
+msgid "Diagnóstico"
+msgstr "Diagnosis"
+
+msgid "El diagnóstico debe realizarse por un profesional de la salud mediante pruebas específicas, historial médico y, en algunos casos, pruebas de provocación controlada."
+msgstr "Diagnosis should be performed by a healthcare professional using specific tests, medical history, and, in some cases, controlled provocation tests."
+
+msgid "Información Clave sobre APLV"
+msgstr "Key Information about CMPA"
+
+msgid "La APLV es una de las alergias alimentarias más comunes en la infancia, pero con el manejo adecuado, la mayoría de los niños pueden llevar una vida normal y saludable."
+msgstr "CMPA is one of the most common food allergies in childhood, but with proper management, most children can lead a normal and healthy life."
+
+msgid "Prevalencia"
+msgstr "Prevalence"
+
+msgid "Afecta al 2-3% de los bebés"
+msgstr "Affects 2-3% of babies"
+
+msgid "Edad de Inicio"
+msgstr "Onset Age"
+
+msgid "Típicamente en los primeros meses de vida"
+msgstr "Typically in the first months of life"
+
+msgid "Pronóstico"
+msgstr "Prognosis"
+
+msgid "80% supera la alergia antes de los 5 años"
+msgstr "80% outgrow the allergy before age 5"
+
+msgid "Tipos"
+msgstr "Types"
+
+msgid "IgE mediada y no IgE mediada"
+msgstr "IgE mediated and non-IgE mediated"
+
+msgid "Recursos y Herramientas"
+msgstr "Resources and Tools"
+
+msgid "📋 Lista de Alimentos Permitidos"
+msgstr "📋 List of Allowed Foods"
+
+msgid "🍽️ Recetas Sin Lácteos"
+msgstr "🍽️ Dairy-Free Recipes"
+
+msgid "🏥 Directorio Médico"
+msgstr "🏥 Medical Directory"
+
+msgid "👥 Grupo de Apoyo"
+msgstr "👥 Support Group"
+
+msgid "Volver al Inicio"
+msgstr "Back to Home"

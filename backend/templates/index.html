@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}{% load i18n %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-gradient-to-br from-primary-light to-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-health-blue mb-6 leading-tight">
+                {% trans "Mundo APLV" %}
+            </h1>
+            <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                {% blocktrans %}Tu guía completa sobre la <span class="text-primary font-semibold">Alergia a la Proteína de la Leche de Vaca</span>. Información confiable, recursos útiles y apoyo para familias.{% endblocktrans %}
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#informacion" class="btn-primary">
+                    {% trans "Aprende Más" %}
+                </a>
+                <a href="{% url 'que_es_aplv' %}" class="px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                    {% trans "¿Qué es APLV?" %}
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Alert -->
+    <div class="my-8">
+        <div class="alert-aplv flex items-center gap-4">
+            <span class="text-2xl">🚨</span>
+            <p class="font-bold md:font-extrabold text-lg md:text-xl text-health-blue">
+                {% trans "En caso de reacción alérgica severa, contacta inmediatamente a servicios de emergencia" %}
+            </p>
+        </div>
+    </div>
+
+    <!-- Quick Access Grid -->
+    <section class="py-12">
+        <h2 class="section-title text-center mb-12">{% trans "Recursos Esenciales" %}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Síntomas -->
+            <div class="card-aplv flex flex-col h-full">
+                <div class="text-4xl mb-4">⚠️</div>
+                <h3 class="text-xl font-bold text-health-blue mb-3">{% trans "Síntomas" %}</h3>
+                <p class="text-slate-600 mb-6 flex-grow">
+                    {% trans "Los síntomas pueden incluir erupciones cutáneas, problemas digestivos, vómitos, diarrea, y en casos severos, anafilaxia." %}
+                </p>
+                <a href="{% url 'sintomas' %}" class="text-primary font-semibold hover:underline">
+                    {% trans "Más Info" %} &rarr;
+                </a>
+            </div>
+
+            <!-- Diagnóstico -->
+            <div class="card-aplv flex flex-col h-full">
+                <div class="text-4xl mb-4">👨‍⚕️</div>
+                <h3 class="text-xl font-bold text-health-blue mb-3">{% trans "Diagnóstico" %}</h3>
+                <p class="text-slate-600 mb-6 flex-grow">
+                    {% trans "El diagnóstico debe realizarse por un profesional de la salud mediante pruebas específicas e historial médico." %}
+                </p>
+                <a href="{% url 'diagnostico' %}" class="text-primary font-semibold hover:underline">
+                    {% trans "Más Info" %} &rarr;
+                </a>
+            </div>
+
+            <!-- Alimentos -->
+            <div class="card-aplv flex flex-col h-full">
+                <div class="text-4xl mb-4">📋</div>
+                <h3 class="text-xl font-bold text-health-blue mb-3">{% trans "Alimentos" %}</h3>
+                <p class="text-slate-600 mb-6 flex-grow">
+                    {% trans "Guía detallada sobre alimentos seguros y cómo leer etiquetas para evitar trazas de leche." %}
+                </p>
+                <a href="{% url 'alimentos' %}" class="text-primary font-semibold hover:underline">
+                    {% trans "Más Info" %} &rarr;
+                </a>
+            </div>
+
+            <!-- Recetas -->
+            <div class="card-aplv flex flex-col h-full">
+                <div class="text-4xl mb-4">🍽️</div>
+                <h3 class="text-xl font-bold text-health-blue mb-3">{% trans "Recetas" %}</h3>
+                <p class="text-slate-600 mb-6 flex-grow">
+                    {% trans "Descubre deliciosas opciones libres de lácteos para que tu familia disfrute de una dieta variada." %}
+                </p>
+                <a href="{% url 'recetas' %}" class="text-primary font-semibold hover:underline">
+                    {% trans "Más Info" %} &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Information Section -->
+    <section class="py-16 bg-slate-50 -mx-4 px-4 md:-mx-8 md:px-8 lg:-mx-12 lg:px-12 rounded-3xl" id="informacion">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h2 class="section-title">{% trans "Información Clave sobre APLV" %}</h2>
+            <p class="text-lg text-slate-600">
+                {% trans "La APLV es una de las alergias alimentarias más comunes en la infancia, pero con el manejo adecuado, la mayoría de los niños pueden llevar una vida normal y saludable." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                <h4 class="text-primary font-bold text-lg mb-2">{% trans "Prevalencia" %}</h4>
+                <p class="text-health-blue">{% trans "Afecta al 2-3% de los bebés" %}</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                <h4 class="text-primary font-bold text-lg mb-2">{% trans "Edad de Inicio" %}</h4>
+                <p class="text-health-blue">{% trans "Típicamente en los primeros meses" %}</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                <h4 class="text-primary font-bold text-lg mb-2">{% trans "Pronóstico" %}</h4>
+                <p class="text-health-blue">{% trans "80% lo supera antes de los 5 años" %}</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                <h4 class="text-primary font-bold text-lg mb-2">{% trans "Tipos" %}</h4>
+                <p class="text-health-blue">{% trans "IgE y No IgE mediada" %}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="py-20 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="section-title">{% trans "¿Necesitas apoyo?" %}</h2>
+            <p class="text-xl text-slate-600 mb-10">
+                {% trans "Unirse a una comunidad puede marcar la diferencia. Encuentra grupos de apoyo y especialistas cerca de ti." %}
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="{% url 'apoyo' %}" class="btn-primary">
+                    {% trans "Grupo de Apoyo" %}
+                </a>
+                <a href="{% url 'directorio' %}" class="px-6 py-3 bg-health-blue text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300">
+                    {% trans "Directorio Médico" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

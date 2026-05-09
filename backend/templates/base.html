@@ -1,0 +1,47 @@
+{% load static %}{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block meta_title %}{% trans "Mundo APLV - Guía completa sobre la Alergia a la Proteína de la Leche de Vaca" %}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% trans "Recursos, información médica y apoyo para familias lidiando con APLV. Encuentra alternativas, síntomas y diagnósticos confiables." %}{% endblock %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:title" content="{% block og_title %}{% trans "Mundo APLV - Información y Apoyo" %}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{% trans "Todo lo que necesitas saber sobre la Alergia a la Proteína de la Leche de Vaca en un solo lugar." %}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% static 'img/MundoAPLV.png' %}{% endblock %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.build_absolute_uri }}">
+    <meta property="twitter:title" content="{% block twitter_title %}{% trans "Mundo APLV - Guía APLV" %}{% endblock %}">
+    <meta property="twitter:description" content="{% block twitter_description %}{% trans "Recursos y apoyo para familias con APLV." %}{% endblock %}">
+    <meta property="twitter:image" content="{% block twitter_image %}{% static 'img/MundoAPLV.png' %}{% endblock %}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'img/logo_light.png' %}">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="font-sans text-slate-800 antialiased">
+    <header id="header-placeholder">
+        {% include "components/header.html" %}
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer id="footer-placeholder">
+        {% include "components/footer.html" %}
+    </footer>
+
+    <script src="{% static 'js/script.js' %}" defer></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

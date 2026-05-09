@@ -1,0 +1,72 @@
+{% load static %}{% load i18n %}
+<nav class="relative z-50 bg-primary shadow-md text-white">
+    <div class="container mx-auto flex justify-between items-center py-4">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <a href="{% url 'index' %}" class="flex items-center">
+                <!-- Usamos brillo para que el logo resalte sobre el fondo turquesa si es necesario -->
+                <img src="{% static 'img/logo_light.png' %}" alt="Mundo APLV Logo" class="h-12 w-auto brightness-0 invert">
+            </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-8">
+            <ul class="flex space-x-6 font-medium">
+                <li><a href="{% url 'index' %}" class="hover:text-secondary transition-colors">{% trans "Inicio" %}</a></li>
+                <li><a href="{% url 'index' %}#informacion" class="hover:text-secondary transition-colors">{% trans "Información" %}</a></li>
+                <li><a href="{% url 'index' %}#recursos" class="hover:text-secondary transition-colors">{% trans "Recursos" %}</a></li>
+            </ul>
+
+            <!-- Language Selector Desktop -->
+            <form action="{% url 'set_language' %}" method="post" class="flex items-center">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
+                <select name="language" onchange="this.form.submit()" class="text-sm bg-white bg-opacity-10 border border-white border-opacity-20 rounded-md px-2 py-1 focus:ring-secondary focus:border-secondary text-white">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}" class="text-slate-800"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                            {{ language.code|upper }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+
+        <!-- Mobile Menu Controls -->
+        <div class="flex items-center lg:hidden space-x-4">
+            <button id="mobile-menu-button" class="text-white p-2 focus:outline-none" aria-label="{% trans "Abrir Menú" %}">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-primary-dark border-t border-white border-opacity-10 py-4 absolute w-full shadow-lg">
+        <div class="container mx-auto px-4 space-y-4">
+            <ul class="flex flex-col space-y-4 font-medium">
+                <li><a href="{% url 'index' %}" class="block py-2 hover:text-secondary">{% trans "Inicio" %}</a></li>
+                <li><a href="{% url 'index' %}#informacion" class="block py-2 hover:text-secondary">{% trans "Información" %}</a></li>
+                <li><a href="{% url 'index' %}#recursos" class="block py-2 hover:text-secondary">{% trans "Recursos" %}</a></li>
+            </ul>
+            
+            <div class="pt-4 border-t border-white border-opacity-10 flex items-center justify-between">
+                <span class="text-sm font-semibold text-white text-opacity-80">{% trans "Idioma" %}:</span>
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
+                    <select name="language" onchange="this.form.submit()" class="text-sm bg-white bg-opacity-10 border border-white border-opacity-20 rounded-md px-3 py-2 text-white">
+                        {% for language in languages %}
+                            <option value="{{ language.code }}" class="text-slate-800"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>

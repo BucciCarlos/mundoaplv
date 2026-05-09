@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Síntomas de APLV: Cómo identificarlos - Mundo APLV" %}{% endblock %}
+{% block meta_description %}{% trans "Aprende a reconocer los síntomas de la Alergia a la Proteína de la Leche de Vaca: desde reacciones cutáneas hasta problemas digestivos severos." %}{% endblock %}
+
+{% block og_title %}{% trans "Síntomas de APLV - Guía de Identificación" %}{% endblock %}
+{% block og_description %}{% trans "Guía detallada sobre los síntomas IgE y No-IgE mediados de la APLV." %}{% endblock %}
+
+{% block content %}
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="section-title text-center">{% trans "Síntomas de APLV" %}</h2>
+            
+            <div class="mb-12 text-left">
+                <p class="text-lg text-slate-600">
+                    {% trans "La Alergia a la Proteína de la Leche de Vaca puede manifestarse de diversas formas. La identificación temprana es crucial para iniciar el tratamiento adecuado y evitar complicaciones." %}
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Cutáneos -->
+                <div class="card-aplv border-t-4 border-primary">
+                    <div class="text-3xl mb-4 text-center md:text-left">🧴</div>
+                    <h3 class="text-xl font-bold text-health-blue mb-4 text-center md:text-left">{% trans "Síntomas Cutáneos" %}</h3>
+                    <ul class="space-y-2 text-slate-600 text-left">
+                        <li>• {% trans "Erupciones cutáneas o urticaria" %}</li>
+                        <li>• {% trans "Dermatitis atópica" %}</li>
+                        <li>• {% trans "Hinchazón de labios o párpados (angioedema)" %}</li>
+                    </ul>
+                </div>
+
+                <!-- Digestivos -->
+                <div class="card-aplv border-t-4 border-primary">
+                    <div class="text-3xl mb-4 text-center md:text-left">🤢</div>
+                    <h3 class="text-xl font-bold text-health-blue mb-4 text-center md:text-left">{% trans "Síntomas Digestivos" %}</h3>
+                    <ul class="space-y-2 text-slate-600 text-left">
+                        <li>• {% trans "Vómitos o regurgitaciones frecuentes" %}</li>
+                        <li>• {% trans "Diarrea o estreñimiento" %}</li>
+                        <li>• {% trans "Cólicos intensos o irritabilidad constante" %}</li>
+                        <li>• {% trans "Sangre o mucosidad en las deposiciones" %}</li>
+                    </ul>
+                </div>
+
+                <!-- Respiratorios -->
+                <div class="card-aplv border-t-4 border-accent">
+                    <div class="text-3xl mb-4 text-center md:text-left">🫁</div>
+                    <h3 class="text-xl font-bold text-health-blue mb-4 text-center md:text-left">{% trans "Síntomas Respiratorios" %}</h3>
+                    <p class="text-sm text-accent font-semibold mb-2 text-center md:text-left">{% trans "Atención: Requieren evaluación urgente" %}</p>
+                    <ul class="space-y-2 text-slate-600 text-left">
+                        <li>• {% trans "Sibilancias (silbidos al respirar)" %}</li>
+                        <li>• {% trans "Tos crónica" %}</li>
+                        <li>• {% trans "Dificultad para respirar" %}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert-aplv mb-12 text-left">
+                <h4 class="font-bold mb-2">{% trans "Anafilaxia: Emergencia Médica" %}</h4>
+                <p>{% trans "En casos severos, puede ocurrir una reacción alérgica grave que afecta a todo el organismo. Si nota dificultad respiratoria súbita o desmayo, busque ayuda inmediata." %}</p>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="{% url 'index' %}" class="btn-primary">
+                    {% trans "Volver al Inicio" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

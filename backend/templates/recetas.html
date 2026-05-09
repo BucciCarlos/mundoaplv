@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Recetas Sin Lácteos y Seguras para APLV - Mundo APLV" %}{% endblock %}
+{% block meta_description %}{% trans "Cocina delicioso y seguro. Descubre nuestra selección de recetas libres de proteína de leche de vaca para toda la familia." %}{% endblock %}
+
+{% block content %}
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="section-title text-center">{% trans "Cocina Sin Lácteos" %}</h2>
+            
+            <div class="mb-12 text-left">
+                <p class="text-lg text-slate-600">
+                    {% trans "Tener APLV no significa renunciar al sabor. Aquí encontrarás ideas nutritivas y seguras para el desayuno, almuerzo y merienda." %}
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Receta 1 -->
+                <div class="card-aplv flex flex-col text-left">
+                    <div class="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center text-4xl">🥞</div>
+                    <h3 class="text-xl font-bold text-health-blue mb-2">{% trans "Panqueques de Avena y Banana" %}</h3>
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="px-2 py-1 bg-primary-light text-primary-dark text-xs font-bold rounded">{% trans "15 min" %}</span>
+                        <span class="px-2 py-1 bg-secondary bg-opacity-20 text-secondary-dark text-xs font-bold rounded">{% trans "Sin Huevo" %}</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-6 flex-grow">
+                        {% trans "Una opción deliciosa y fácil para comenzar el día, utilizando bebida de arroz o coco." %}
+                    </p>
+                    <button class="text-primary font-bold hover:underline text-left">{% trans "Ver Receta Completa" %} &rarr;</button>
+                </div>
+
+                <!-- Receta 2 -->
+                <div class="card-aplv flex flex-col text-left">
+                    <div class="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center text-4xl">🥣</div>
+                    <h3 class="text-xl font-bold text-health-blue mb-2">{% trans "Crema de Verduras con Coco" %}</h3>
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="px-2 py-1 bg-primary-light text-primary-dark text-xs font-bold rounded">{% trans "30 min" %}</span>
+                        <span class="px-2 py-1 bg-secondary bg-opacity-20 text-secondary-dark text-xs font-bold rounded">{% trans "Vegano" %}</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-6 flex-grow">
+                        {% trans "Sustituimos la crema de leche por leche de coco para lograr una textura cremosa y nutritiva." %}
+                    </p>
+                    <button class="text-primary font-bold hover:underline text-left">{% trans "Ver Receta Completa" %} &rarr;</button>
+                </div>
+
+                <!-- Receta 3 -->
+                <div class="card-aplv flex flex-col text-left">
+                    <div class="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center text-4xl">🧁</div>
+                    <h3 class="text-xl font-bold text-health-blue mb-2">{% trans "Muffins de Manzana y Canela" %}</h3>
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="px-2 py-1 bg-primary-light text-primary-dark text-xs font-bold rounded">{% trans "45 min" %}</span>
+                        <span class="px-2 py-1 bg-secondary bg-opacity-20 text-secondary-dark text-xs font-bold rounded">{% trans "Sin Trigo" %}</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-6 flex-grow">
+                        {% trans "Merienda perfecta para llevar. Usamos margarina vegetal 100% libre de lácteos." %}
+                    </p>
+                    <button class="text-primary font-bold hover:underline text-left">{% trans "Ver Receta Completa" %} &rarr;</button>
+                </div>
+            </div>
+
+            <div class="alert-aplv mb-12 text-left">
+                <p class="text-sm">
+                    <strong>{% trans "Consejo de Cocina:" %}</strong> {% trans "Muchos productos como margarinas o caldos pueden contener trazas de leche. Siempre verifica el sello de seguridad en el empaque." %}
+                </p>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="{% url 'index' %}" class="btn-primary">
+                    {% trans "Volver al Inicio" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

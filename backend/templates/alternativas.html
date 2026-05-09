@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Alternativas a la Leche de Vaca - Mundo APLV" %}{% endblock %}
+
+{% block content %}
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="section-title text-center">{% trans "Alternativas a la Leche de Vaca" %}</h2>
+
+            <!-- Medical Warning -->
+            <div class="alert-aplv mb-12 text-left">
+                <h3 class="font-bold text-lg mb-2">{% trans "Nota Importante" %}</h3>
+                <p>{% trans "La información presentada en esta página es solo una guía. La elección de una alternativa siempre debe ser supervisada por un pediatra o especialista." %}</p>
+                <p class="font-bold mt-2 text-accent">{% trans "Nunca realices cambios en la alimentación de tu hijo sin consultar a un profesional de la salud." %}</p>
+            </div>
+
+            <div class="mb-12 text-left">
+                <p class="text-lg text-slate-600">
+                    {% trans "Para los niños con APLV, es fundamental encontrar alternativas seguras y nutritivas que aseguren su crecimiento óptimo." %}
+                </p>
+            </div>
+
+            <!-- Formula Comparison -->
+            <h3 class="text-2xl font-bold text-health-blue mb-8 text-center md:text-left">{% trans "Fórmulas Infantiles Especializadas" %}</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- FEH -->
+                <div class="card-aplv border-t-4 border-primary text-left">
+                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                        <span class="w-3 h-3 rounded-full bg-primary"></span>
+                        <h4 class="font-bold text-primary">{% trans "Hidrolizadas (FEH)" %}</h4>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-4 italic text-center md:text-left">{% trans "Primera opción en la mayoría de los casos." %}</p>
+                    <p class="text-slate-600 mb-4 text-sm">
+                        {% trans "Proteínas descompuestas en fragmentos pequeños para que el sistema inmunitario no las reconozca." %}
+                    </p>
+                    <div class="p-3 bg-primary-light rounded-lg text-xs text-primary-dark font-semibold text-center">
+                        {% trans "Apta para APLV Leve a Moderada" %}
+                    </div>
+                </div>
+
+                <!-- FAA -->
+                <div class="card-aplv border-t-4 border-accent text-left">
+                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                        <span class="w-3 h-3 rounded-full bg-accent"></span>
+                        <h4 class="font-bold text-accent">{% trans "Aminoácidos (FAA)" %}</h4>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-4 italic text-center md:text-left">{% trans "100% hipoalergénicas." %}</p>
+                    <p class="text-slate-600 mb-4 text-sm">
+                        {% trans "No contienen fragmentos de proteína, solo sus componentes básicos. Sin riesgo de reacción." %}
+                    </p>
+                    <div class="p-3 bg-accent-light bg-opacity-10 rounded-lg text-xs text-accent font-semibold text-center">
+                        {% trans "Casos Graves o Anafilaxia" %}
+                    </div>
+                </div>
+
+                <!-- Arroz -->
+                <div class="card-aplv border-t-4 border-secondary text-left">
+                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                        <span class="w-3 h-3 rounded-full bg-secondary"></span>
+                        <h4 class="font-bold text-secondary-dark">{% trans "Arroz Hidrolizado" %}</h4>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-4 italic text-center md:text-left">{% trans "Origen vegetal." %}</p>
+                    <p class="text-slate-600 mb-4 text-sm">
+                        {% trans "Una alternativa segura para quienes no toleran la FEH o prefieren evitar proteínas animales." %}
+                    </p>
+                    <div class="p-3 bg-secondary bg-opacity-10 rounded-lg text-xs text-secondary-dark font-semibold text-center">
+                        {% trans "Alternativa Vegetal Segura" %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Content -->
+            <div class="space-y-8 text-slate-600 text-left">
+                <div>
+                    <h3 class="text-xl font-bold text-health-blue mb-4">{% trans "Leche Materna" %}</h3>
+                    <p>{% trans "Es el mejor alimento. Si amamantas, deberás seguir una dieta de exclusión estricta de lácteos para que la proteína no pase a la leche." %}</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <h3 class="text-xl font-bold text-health-blue mb-4">{% trans "Bebidas Vegetales" %}</h3>
+                    <p class="mb-4">{% trans "Ojo: No todas son sustitutos nutricionales." %}</p>
+                    <ul class="list-disc pl-5 space-y-2 text-sm">
+                        <li><strong>{% trans "Soja:" %}</strong> {% trans "Solo si no hay alergia a la soja asociada y bajo supervisión médica." %}</li>
+                        <li><strong>{% trans "Almendra/Avena/Coco:" %}</strong> {% trans "Bajas en proteína. No recomendadas como sustituto principal en niños pequeños." %}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <a href="{% url 'index' %}" class="btn-primary">
+                    {% trans "Volver al Inicio" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

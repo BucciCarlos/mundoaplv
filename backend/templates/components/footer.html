@@ -1,0 +1,37 @@
+{% load i18n %}
+<div class="bg-health-blue text-white py-12 mt-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Branding/About -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-secondary">Mundo APLV</h3>
+                <p class="text-sm text-white text-opacity-80">
+                    {% trans "Información con fines educativos. Consulta siempre con tu médico." %}
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-secondary">{% trans "Contacto" %}</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>📧 contacto@mundoaplv.com</li>
+                    <li>📞 +54 11 1234-5678</li>
+                </ul>
+            </div>
+
+            <!-- Important Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-secondary">{% trans "Recursos" %}</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="{% url 'que_es_aplv' %}" class="hover:text-secondary transition-colors">{% trans "¿Qué es APLV?" %}</a></li>
+                    <li><a href="{% url 'sintomas' %}" class="hover:text-secondary transition-colors">{% trans "Síntomas" %}</a></li>
+                    <li><a href="{% url 'diagnostico' %}" class="hover:text-secondary transition-colors">{% trans "Diagnóstico" %}</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-white border-opacity-10 mt-12 pt-8 text-center text-xs text-white text-opacity-60">
+            <p>&copy; 2025 Mundo APLV. {% trans "Todos los derechos reservados." %}</p>
+        </div>
+    </div>
+</div>

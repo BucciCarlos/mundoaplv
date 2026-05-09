@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Guía de Alimentos Permitidos y Prohibidos para APLV - Mundo APLV" %}{% endblock %}
+{% block meta_description %}{% trans "Consulta nuestra lista detallada de alimentos seguros, riesgos de trazas y productos prohibidos para el manejo de la Alergia a la Proteína de la Leche de Vaca." %}{% endblock %}
+
+{% block content %}
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="section-title text-center">{% trans "Guía de Alimentación Segura" %}</h2>
+            
+            <div class="mb-12 text-left">
+                <p class="text-lg text-slate-600">
+                    {% trans "Identificar los ingredientes en las etiquetas es la base de una dieta de exclusión exitosa. Aquí tienes una clasificación visual para ayudarte en tus compras." %}
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Permitidos -->
+                <div class="card-aplv border-t-4 border-primary text-left">
+                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                        <span class="text-2xl">✅</span>
+                        <h3 class="text-xl font-bold text-health-blue">{% trans "Permitidos" %}</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li>• {% trans "Frutas y verduras frescas" %}</li>
+                        <li>• {% trans "Legumbres y cereales puros (arroz, maíz)" %}</li>
+                        <li>• {% trans "Carnes, pescados y huevos frescos" %}</li>
+                        <li>• {% trans "Aceites vegetales puros" %}</li>
+                        <li>• {% trans "Azúcar, miel y tubérculos" %}</li>
+                    </ul>
+                </div>
+
+                <!-- Cuidado / Trazas -->
+                <div class="card-aplv border-t-4 border-secondary text-left">
+                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                        <span class="text-2xl">⚠️</span>
+                        <h3 class="text-xl font-bold text-health-blue">{% trans "Dudosos / Trazas" %}</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3 text-center md:text-left">{% trans "Requieren lectura minuciosa de etiquetas." %}</p>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li>• {% trans "Panificados y galletas industriales" %}</li>
+                        <li>• {% trans "Embutidos y fiambres" %}</li>
+                        <li>• {% trans "Caldos y sopas instantáneas" %}</li>
+                        <li>• {% trans "Chocolates y golosinas" %}</li>
+                        <li>• {% trans "Productos 'May contain milk'" %}</li>
+                    </ul>
+                </div>
+
+                <!-- Prohibidos -->
+                <div class="card-aplv border-t-4 border-accent text-left">
+                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                        <span class="text-2xl">🚫</span>
+                        <h3 class="text-xl font-bold text-health-blue">{% trans "Prohibidos" %}</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li>• {% trans "Leche de cualquier origen animal" %}</li>
+                        <li>• {% trans "Quesos, yogures y mantecas" %}</li>
+                        <li>• {% trans "Crema de leche y dulce de leche" %}</li>
+                        <li>• {% trans "Suero de leche y caseína" %}</li>
+                        <li>• {% trans "Alimentos con lactosa (por riesgo)" %}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert-aplv mb-12 text-left">
+                <h4 class="font-bold mb-2">{% trans "Consejo de Seguridad" %}</h4>
+                <p>{% trans "La ley de etiquetado varía por país. Siempre busca sellos oficiales de 'Libre de Lácteos' y lee la lista de ingredientes incluso en productos que ya conoces, ya que las fórmulas pueden cambiar." %}</p>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="{% url 'index' %}" class="btn-primary">
+                    {% trans "Volver al Inicio" %}
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

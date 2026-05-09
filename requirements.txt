@@ -1,0 +1,7 @@
+django>=4.2,<5.0
+django-ninja
+psycopg2-binary
+python-dotenv
+django-modeltranslation
+dj-database-url
+gunicorn

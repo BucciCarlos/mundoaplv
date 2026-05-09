@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-dark transition-all duration-300 inline-block;
+    }
+
+    .section-title {
+        @apply text-3xl md:text-4xl font-bold text-health-blue mb-6 leading-tight;
+    }
+
+    .alert-aplv {
+        @apply p-4 bg-accent-light bg-opacity-10 border-l-4 border-accent text-health-slate rounded-r-lg;
+    }
+
+    .card-aplv {
+        @apply bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:border-primary/20 transition-all duration-300;
+    }
+}
+
+@layer base {
+    body {
+        @apply text-health-slate bg-white antialiased;
+    }
+}
