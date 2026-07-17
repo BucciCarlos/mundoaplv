@@ -834,10 +834,6 @@ body {
   max-width: 56rem;
 }
 
-.max-w-prose {
-  max-width: 65ch;
-}
-
 .flex-shrink-0 {
   flex-shrink: 0;
 }
