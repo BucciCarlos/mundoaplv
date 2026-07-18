@@ -6,10 +6,10 @@ class Recipe(models.Model):
     instructions = models.TextField()
     prep_time_minutes = models.PositiveIntegerField(default=0)
     is_published = models.BooleanField(default=False)
-    free_from_allergens = models.ManyToManyField(
+    contains_allergens = models.ManyToManyField(
         'taxonomy.Allergen',
-        related_name='safe_recipes',
-        help_text="Alérgenos de los cuales esta receta está libre"
+        related_name='recipes',
+        help_text="Alérgenos presentes en esta receta (se utilizarán para exclusión en búsquedas)"
     )
 
     def __str__(self):
