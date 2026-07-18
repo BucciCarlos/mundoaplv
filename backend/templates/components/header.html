@@ -1,10 +1,13 @@
 {% load static %}{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
 <nav class="relative z-50 bg-primary shadow-md text-white">
-    <div class="container mx-auto flex justify-between items-center py-4">
+    <div class="container mx-auto flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8">
         <!-- Logo -->
         <div class="flex-shrink-0">
             <a href="{% url 'index' %}" class="flex items-center">
-                <!-- Usamos brillo para que el logo resalte sobre el fondo turquesa si es necesario -->
                 <img src="{% static 'img/logo_light.png' %}" alt="Mundo APLV Logo" class="h-12 w-auto brightness-0 invert">
             </a>
         </div>
@@ -12,9 +15,69 @@
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center space-x-8">
             <ul class="flex space-x-6 font-medium">
-                <li><a href="{% url 'index' %}" class="hover:text-secondary transition-colors">{% trans "Inicio" %}</a></li>
-                <li><a href="{% url 'index' %}#informacion" class="hover:text-secondary transition-colors">{% trans "Información" %}</a></li>
-                <li><a href="{% url 'index' %}#recursos" class="hover:text-secondary transition-colors">{% trans "Recursos" %}</a></li>
+                <li><a href="{% url 'index' %}" class="hover:text-secondary transition-colors py-2 block">{% trans "Inicio" %}</a></li>
+                
+                <!-- Dropdown: Sobre APLV -->
+                <li class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-secondary transition-colors focus:outline-none">
+                        <span>{% trans "Sobre APLV" %}</span>
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md mt-2 py-2 w-52 z-50 border border-slate-100">
+                        <a href="{% url 'alergias' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "¿Qué es la APLV?" %}</a>
+                        <a href="{% url 'sintomas' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "Síntomas" %}</a>
+                        <a href="{% url 'tipos' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "Tipos de Alergia" %}</a>
+                    </div>
+                </li>
+
+                <!-- Dropdown: Alimentación -->
+                <li class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-secondary transition-colors focus:outline-none">
+                        <span>{% trans "Alimentación" %}</span>
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md mt-2 py-2 w-56 z-50 border border-slate-100">
+                        <a href="{% url 'formulas' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "Fórmulas y Alternativas" %}</a>
+                        <a href="{% url 'etiquetas' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "Lectura de Etiquetas" %}</a>
+                        <a href="{% url 'recetas' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "Recetas Sin Lácteos" %}</a>
+                        <a href="{% url 'escaner' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 px-4 py-2 text-sm flex items-center justify-between transition-colors">
+                            <span>{% trans "Escáner de Alimentos" %}</span>
+                            <span class="bg-amber-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded leading-none">{% trans "PRÓX" %}</span>
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Dropdown: Entorno -->
+                <li class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-secondary transition-colors focus:outline-none">
+                        <span>{% trans "Entorno" %}</span>
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md mt-2 py-2 w-52 z-50 border border-slate-100">
+                        <a href="{% url 'escuelas' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "APLV en la Escuela" %}</a>
+                        <a href="{% url 'familia' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "Familia y Cuidadores" %}</a>
+                    </div>
+                </li>
+
+                <!-- Dropdown: Comunidad -->
+                <li class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-secondary transition-colors focus:outline-none">
+                        <span>{% trans "Comunidad" %}</span>
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 hidden group-hover:block bg-white shadow-md rounded-md mt-2 py-2 w-52 z-50 border border-slate-100">
+                        <a href="{% url 'comunidad' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "Foro y Apoyo" %}</a>
+                        <a href="{% url 'contacto' %}" class="hover:bg-slate-50 hover:text-primary text-slate-700 block px-4 py-2 text-sm transition-colors">{% trans "Directorio y Contacto" %}</a>
+                    </div>
+                </li>
             </ul>
 
             <!-- Language Selector Desktop -->
@@ -22,9 +85,6 @@
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
                 <select name="language" onchange="this.form.submit()" class="text-sm bg-white bg-opacity-10 border border-white border-opacity-20 rounded-md px-2 py-1 focus:ring-secondary focus:border-secondary text-white">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
                     {% for language in languages %}
                         <option value="{{ language.code }}" class="text-slate-800"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
                             {{ language.code|upper }}
@@ -47,12 +107,55 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="hidden lg:hidden bg-primary-dark border-t border-white border-opacity-10 py-4 absolute w-full shadow-lg">
         <div class="container mx-auto px-4 space-y-4">
-            <ul class="flex flex-col space-y-4 font-medium">
-                <li><a href="{% url 'index' %}" class="block py-2 hover:text-secondary">{% trans "Inicio" %}</a></li>
-                <li><a href="{% url 'index' %}#informacion" class="block py-2 hover:text-secondary">{% trans "Información" %}</a></li>
-                <li><a href="{% url 'index' %}#recursos" class="block py-2 hover:text-secondary">{% trans "Recursos" %}</a></li>
+            <ul class="flex flex-col space-y-3 font-medium">
+                <li><a href="{% url 'index' %}" class="block py-1 hover:text-secondary transition-colors">{% trans "Inicio" %}</a></li>
+                
+                <!-- Categoría Móvil: Sobre APLV -->
+                <li class="space-y-1">
+                    <span class="text-xs font-semibold text-white text-opacity-50 uppercase tracking-wider block pt-2">{% trans "Sobre APLV" %}</span>
+                    <ul class="pl-4 space-y-1 border-l border-white border-opacity-15">
+                        <li><a href="{% url 'alergias' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "¿Qué es la APLV?" %}</a></li>
+                        <li><a href="{% url 'sintomas' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "Síntomas" %}</a></li>
+                        <li><a href="{% url 'tipos' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "Tipos de Alergia" %}</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Categoría Móvil: Alimentación -->
+                <li class="space-y-1">
+                    <span class="text-xs font-semibold text-white text-opacity-50 uppercase tracking-wider block pt-2">{% trans "Alimentación" %}</span>
+                    <ul class="pl-4 space-y-1 border-l border-white border-opacity-15">
+                        <li><a href="{% url 'formulas' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "Fórmulas y Alternativas" %}</a></li>
+                        <li><a href="{% url 'etiquetas' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "Lectura de Etiquetas" %}</a></li>
+                        <li><a href="{% url 'recetas' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "Recetas Sin Lácteos" %}</a></li>
+                        <li>
+                            <a href="{% url 'escaner' %}" class="py-1 text-sm hover:text-secondary transition-colors flex items-center justify-between">
+                                <span>{% trans "Escáner de Alimentos" %}</span>
+                                <span class="bg-amber-500 text-white text-[8px] font-bold px-1 py-0.5 rounded leading-none">{% trans "PRÓX" %}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Categoría Móvil: Entorno -->
+                <li class="space-y-1">
+                    <span class="text-xs font-semibold text-white text-opacity-50 uppercase tracking-wider block pt-2">{% trans "Entorno" %}</span>
+                    <ul class="pl-4 space-y-1 border-l border-white border-opacity-15">
+                        <li><a href="{% url 'escuelas' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "APLV en la Escuela" %}</a></li>
+                        <li><a href="{% url 'familia' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "Familia y Cuidadores" %}</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Categoría Móvil: Comunidad -->
+                <li class="space-y-1">
+                    <span class="text-xs font-semibold text-white text-opacity-50 uppercase tracking-wider block pt-2">{% trans "Comunidad" %}</span>
+                    <ul class="pl-4 space-y-1 border-l border-white border-opacity-15">
+                        <li><a href="{% url 'comunidad' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "Foro y Apoyo" %}</a></li>
+                        <li><a href="{% url 'contacto' %}" class="block py-1 text-sm hover:text-secondary transition-colors">{% trans "Directorio y Contacto" %}</a></li>
+                    </ul>
+                </li>
             </ul>
             
+            <!-- Language Selector Mobile -->
             <div class="pt-4 border-t border-white border-opacity-10 flex items-center justify-between">
                 <span class="text-sm font-semibold text-white text-opacity-80">{% trans "Idioma" %}:</span>
                 <form action="{% url 'set_language' %}" method="post">

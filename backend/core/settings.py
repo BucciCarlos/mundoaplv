@@ -21,6 +21,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
+    'apps.users.apps.UsersConfig',
+    'apps.taxonomy.apps.TaxonomyConfig',
+    'apps.recipes.apps.RecipesConfig',
+    'apps.articles.apps.ArticlesConfig',
 ]
 
 MIDDLEWARE = [
@@ -107,4 +111,8 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Custom User Model
+AUTH_USER_MODEL = 'users.CustomUser'
+
 

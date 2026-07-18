@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-08 20:25+0000\n"
+"POT-Creation-Date: 2026-07-18 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,104 +12,966 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Mundo APLV - Alergia a la Proteína de la Leche de Vaca"
+#: backend/templates/alimentos.html:4
+msgid "Guía de Alimentos Permitidos y Prohibidos para APLV - Mundo APLV"
+msgstr ""
+
+#: backend/templates/alimentos.html:5
+msgid ""
+"Consulta nuestra lista detallada de alimentos seguros, riesgos de trazas y "
+"productos prohibidos para el manejo de la Alergia a la Proteína de la Leche "
+"de Vaca."
+msgstr ""
+
+#: backend/templates/alimentos.html:10
+msgid "Guía de Alimentación Segura"
+msgstr ""
+
+#: backend/templates/alimentos.html:14
+msgid ""
+"Identificar los ingredientes en las etiquetas es la base de una dieta de "
+"exclusión exitosa. Aquí tienes una clasificación visual para ayudarte en tus "
+"compras."
+msgstr ""
+
+#: backend/templates/alimentos.html:23
+msgid "Permitidos"
+msgstr ""
+
+#: backend/templates/alimentos.html:26
+msgid "Frutas y verduras frescas"
+msgstr ""
+
+#: backend/templates/alimentos.html:27
+msgid "Legumbres y cereales puros (arroz, maíz)"
+msgstr ""
+
+#: backend/templates/alimentos.html:28
+msgid "Carnes, pescados y huevos frescos"
+msgstr ""
+
+#: backend/templates/alimentos.html:29
+msgid "Aceites vegetales puros"
+msgstr ""
+
+#: backend/templates/alimentos.html:30
+msgid "Azúcar, miel y tubérculos"
+msgstr ""
+
+#: backend/templates/alimentos.html:38
+msgid "Dudosos / Trazas"
+msgstr ""
+
+#: backend/templates/alimentos.html:40
+msgid "Requieren lectura minuciosa de etiquetas."
+msgstr ""
+
+#: backend/templates/alimentos.html:42
+msgid "Panificados y galletas industriales"
+msgstr ""
+
+#: backend/templates/alimentos.html:43
+msgid "Embutidos y fiambres"
+msgstr ""
+
+#: backend/templates/alimentos.html:44
+msgid "Caldos y sopas instantáneas"
+msgstr ""
+
+#: backend/templates/alimentos.html:45
+msgid "Chocolates y golosinas"
+msgstr ""
+
+#: backend/templates/alimentos.html:46
+msgid "Productos 'May contain milk'"
+msgstr ""
+
+#: backend/templates/alimentos.html:54
+msgid "Prohibidos"
+msgstr ""
+
+#: backend/templates/alimentos.html:57
+msgid "Leche de cualquier origen animal"
+msgstr ""
+
+#: backend/templates/alimentos.html:58
+msgid "Quesos, yogures y mantecas"
+msgstr ""
+
+#: backend/templates/alimentos.html:59
+msgid "Crema de leche y dulce de leche"
+msgstr ""
+
+#: backend/templates/alimentos.html:60
+msgid "Suero de leche y caseína"
+msgstr ""
+
+#: backend/templates/alimentos.html:61
+msgid "Alimentos con lactosa (por riesgo)"
+msgstr ""
+
+#: backend/templates/alimentos.html:67
+msgid "Consejo de Seguridad"
+msgstr ""
+
+#: backend/templates/alimentos.html:68
+msgid ""
+"La ley de etiquetado varía por país. Siempre busca sellos oficiales de "
+"'Libre de Lácteos' y lee la lista de ingredientes incluso en productos que "
+"ya conoces, ya que las fórmulas pueden cambiar."
+msgstr ""
+
+#: backend/templates/alimentos.html:73 backend/templates/alternativas.html:92
+#: backend/templates/apoyo.html:43 backend/templates/diagnostico.html:75
+#: backend/templates/directorio.html:52 backend/templates/que-es-aplv.html:46
+#: backend/templates/recetas.html:70 backend/templates/sintomas.html:65
+msgid "Volver al Inicio"
+msgstr "Back to Home"
+
+#: backend/templates/alternativas.html:4
+msgid "Alternativas a la Leche de Vaca - Mundo APLV"
+msgstr ""
+
+#: backend/templates/alternativas.html:9
+msgid "Alternativas a la Leche de Vaca"
+msgstr ""
+
+#: backend/templates/alternativas.html:13
+msgid "Nota Importante"
+msgstr ""
+
+#: backend/templates/alternativas.html:14
+msgid ""
+"La información presentada en esta página es solo una guía. La elección de "
+"una alternativa siempre debe ser supervisada por un pediatra o especialista."
+msgstr ""
+
+#: backend/templates/alternativas.html:15
+msgid ""
+"Nunca realices cambios en la alimentación de tu hijo sin consultar a un "
+"profesional de la salud."
+msgstr ""
+
+#: backend/templates/alternativas.html:20
+msgid ""
+"Para los niños con APLV, es fundamental encontrar alternativas seguras y "
+"nutritivas que aseguren su crecimiento óptimo."
+msgstr ""
+
+#: backend/templates/alternativas.html:25
+msgid "Fórmulas Infantiles Especializadas"
+msgstr ""
+
+#: backend/templates/alternativas.html:31
+msgid "Hidrolizadas (FEH)"
+msgstr ""
+
+#: backend/templates/alternativas.html:33
+msgid "Primera opción en la mayoría de los casos."
+msgstr ""
+
+#: backend/templates/alternativas.html:35
+msgid ""
+"Proteínas descompuestas en fragmentos pequeños para que el sistema "
+"inmunitario no las reconozca."
+msgstr ""
+
+#: backend/templates/alternativas.html:38
+msgid "Apta para APLV Leve a Moderada"
+msgstr ""
+
+#: backend/templates/alternativas.html:46
+msgid "Aminoácidos (FAA)"
+msgstr ""
+
+#: backend/templates/alternativas.html:48
+#, python-format
+msgid "100%% hipoalergénicas."
+msgstr ""
+
+#: backend/templates/alternativas.html:50
+msgid ""
+"No contienen fragmentos de proteína, solo sus componentes básicos. Sin "
+"riesgo de reacción."
+msgstr ""
+
+#: backend/templates/alternativas.html:53
+msgid "Casos Graves o Anafilaxia"
+msgstr ""
+
+#: backend/templates/alternativas.html:61
+msgid "Arroz Hidrolizado"
+msgstr ""
+
+#: backend/templates/alternativas.html:63
+msgid "Origen vegetal."
+msgstr ""
+
+#: backend/templates/alternativas.html:65
+msgid ""
+"Una alternativa segura para quienes no toleran la FEH o prefieren evitar "
+"proteínas animales."
+msgstr ""
+
+#: backend/templates/alternativas.html:68
+msgid "Alternativa Vegetal Segura"
+msgstr ""
+
+#: backend/templates/alternativas.html:76
+msgid "Leche Materna"
+msgstr ""
+
+#: backend/templates/alternativas.html:77
+msgid ""
+"Es el mejor alimento. Si amamantas, deberás seguir una dieta de exclusión "
+"estricta de lácteos para que la proteína no pase a la leche."
+msgstr ""
+
+#: backend/templates/alternativas.html:81
+msgid "Bebidas Vegetales"
+msgstr ""
+
+#: backend/templates/alternativas.html:82
+msgid "Ojo: No todas son sustitutos nutricionales."
+msgstr ""
+
+#: backend/templates/alternativas.html:84
+msgid "Soja:"
+msgstr ""
+
+#: backend/templates/alternativas.html:84
+msgid "Solo si no hay alergia a la soja asociada y bajo supervisión médica."
+msgstr ""
+
+#: backend/templates/alternativas.html:85
+msgid "Almendra/Avena/Coco:"
+msgstr ""
+
+#: backend/templates/alternativas.html:85
+msgid ""
+"Bajas en proteína. No recomendadas como sustituto principal en niños "
+"pequeños."
+msgstr ""
+
+#: backend/templates/apoyo.html:4
+msgid "Grupos de Apoyo y Comunidad APLV - Mundo APLV"
+msgstr ""
+
+#: backend/templates/apoyo.html:5
+msgid ""
+"No estás solo. Conecta con otros padres, grupos de apoyo y asociaciones para "
+"compartir experiencias y consejos sobre la APLV."
+msgstr ""
+
+#: backend/templates/apoyo.html:10 backend/templates/comunidad.html:6
+msgid "Comunidad y Apoyo"
+msgstr ""
+
+#: backend/templates/apoyo.html:14
+msgid ""
+"El camino de la APLV es más fácil cuando se transita en compañía. Aquí "
+"encontrarás recursos para conectar con otras familias."
+msgstr ""
+
+#: backend/templates/apoyo.html:20
+msgid "Asociaciones Nacionales"
+msgstr ""
+
+#: backend/templates/apoyo.html:22
+msgid ""
+"Organizaciones dedicadas a la defensa de los derechos de pacientes con "
+"alergias alimentarias y difusión de información oficial."
+msgstr ""
+
+#: backend/templates/apoyo.html:24
+msgid "Ver asociaciones recomendadas"
+msgstr ""
+
+#: backend/templates/apoyo.html:28
+msgid "Grupos de Padres"
+msgstr ""
+
+#: backend/templates/apoyo.html:30
+msgid ""
+"Redes sociales y grupos de WhatsApp donde padres comparten recetas, alertas "
+"de productos y apoyo emocional."
+msgstr ""
+
+#: backend/templates/apoyo.html:32
+msgid "Unirse a la comunidad"
+msgstr ""
+
+#: backend/templates/apoyo.html:37
+msgid "¿Necesitas hablar?"
+msgstr ""
+
+#: backend/templates/apoyo.html:38
+msgid ""
+"Si te sientes abrumado por el diagnóstico, recuerda que es una etapa de "
+"transición. Busca apoyo profesional si la ansiedad afecta tu día a día."
+msgstr ""
+
+#: backend/templates/base.html:8
+#, fuzzy
+#| msgid "Mundo APLV - Alergia a la Proteína de la Leche de Vaca"
+msgid ""
+"Mundo APLV - Guía completa sobre la Alergia a la Proteína de la Leche de Vaca"
 msgstr "Mundo APLV - Allergy to Cow's Milk Protein"
 
-msgid "Inicio"
-msgstr "Home"
+#: backend/templates/base.html:9
+msgid ""
+"Recursos, información médica y apoyo para familias lidiando con APLV. "
+"Encuentra alternativas, síntomas y diagnósticos confiables."
+msgstr ""
 
-msgid "Información"
-msgstr "Information"
+#: backend/templates/base.html:14
+msgid "Mundo APLV - Información y Apoyo"
+msgstr ""
 
-msgid "Recursos"
-msgstr "Resources"
+#: backend/templates/base.html:15
+#, fuzzy
+#| msgid "Mundo APLV - Alergia a la Proteína de la Leche de Vaca"
+msgid ""
+"Todo lo que necesitas saber sobre la Alergia a la Proteína de la Leche de "
+"Vaca en un solo lugar."
+msgstr "Mundo APLV - Allergy to Cow's Milk Protein"
 
-msgid "Contacto"
-msgstr "Contact"
+#: backend/templates/base.html:21
+#, fuzzy
+#| msgid "Mundo APLV"
+msgid "Mundo APLV - Guía APLV"
+msgstr "Mundo APLV"
 
+#: backend/templates/base.html:22
+msgid "Recursos y apoyo para familias con APLV."
+msgstr ""
+
+#: backend/templates/components/footer.html:9
 msgid "Información con fines educativos. Consulta siempre con tu médico."
 msgstr "Information for educational purposes. Always consult your doctor."
 
-msgid "Mundo APLV"
-msgstr "Mundo APLV"
+#: backend/templates/components/footer.html:15
+msgid "Contacto"
+msgstr "Contact"
 
-msgid "Aprende Más"
-msgstr "Learn More"
+#: backend/templates/components/footer.html:24
+#: backend/templates/components/header.html:17
+#: backend/templates/components/header.html:53
+msgid "Recursos"
+msgstr "Resources"
 
-msgid "En caso de reacción alérgica severa, contacta inmediatamente a servicios de emergencia"
-msgstr "In case of severe allergic reaction, contact emergency services immediately"
-
+#: backend/templates/components/footer.html:26 backend/templates/index.html:19
 msgid "¿Qué es APLV?"
 msgstr "What is CMPA?"
 
-msgid "La Alergia a la Proteína de la Leche de Vaca es una reacción inmunológica adversa a las proteínas presentes en la leche de vaca, afectando principalmente a bebés y niños pequeños."
-msgstr "Cow's Milk Protein Allergy is an adverse immune reaction to proteins present in cow's milk, mainly affecting babies and young children."
-
-msgid "Más Info"
-msgstr "More Info"
-
+#: backend/templates/components/footer.html:27 backend/templates/index.html:42
 msgid "Síntomas"
 msgstr "Symptoms"
 
-msgid "Los síntomas pueden incluir erupciones cutáneas, problemas digestivos, vómitos, diarrea, y en casos severos, anafilaxia. La identificación temprana es crucial."
-msgstr "Symptoms can include skin rashes, digestive problems, vomiting, diarrhea, and in severe cases, anaphylaxis. Early identification is crucial."
-
-msgid "Alternativas"
-msgstr "Alternatives"
-
-msgid "Existen múltiples opciones como fórmulas hidrolizadas, leches vegetales fortificadas y productos libres de lácteos para mantener una nutrición adecuada."
-msgstr "There are multiple options such as hydrolyzed formulas, fortified plant-based milks, and dairy-free products to maintain proper nutrition."
-
+#: backend/templates/components/footer.html:28 backend/templates/index.html:54
 msgid "Diagnóstico"
 msgstr "Diagnosis"
 
-msgid "El diagnóstico debe realizarse por un profesional de la salud mediante pruebas específicas, historial médico y, en algunos casos, pruebas de provocación controlada."
-msgstr "Diagnosis should be performed by a healthcare professional using specific tests, medical history, and, in some cases, controlled provocation tests."
+#: backend/templates/components/footer.html:34
+msgid "Todos los derechos reservados."
+msgstr ""
 
+#: backend/templates/components/header.html:15
+#: backend/templates/components/header.html:51
+msgid "Inicio"
+msgstr "Home"
+
+#: backend/templates/components/header.html:16
+#: backend/templates/components/header.html:52
+msgid "Información"
+msgstr "Information"
+
+#: backend/templates/components/header.html:39
+msgid "Abrir Menú"
+msgstr ""
+
+#: backend/templates/components/header.html:57
+msgid "Idioma"
+msgstr ""
+
+#: backend/templates/comunidad.html:7 backend/templates/escaner.html:7
+#: backend/templates/escuelas.html:7 backend/templates/etiquetas.html:7
+#: backend/templates/familia.html:7 backend/templates/tipos.html:7
+msgid "Próximamente..."
+msgstr "Coming soon..."
+
+#: backend/templates/diagnostico.html:4
+msgid "Diagnóstico de APLV: El camino hacia la detección - Mundo APLV"
+msgstr ""
+
+#: backend/templates/diagnostico.html:9
+#, fuzzy
+#| msgid "Diagnóstico"
+msgid "Proceso de Diagnóstico"
+msgstr "Diagnosis"
+
+#: backend/templates/diagnostico.html:13
+msgid ""
+"Llegar a un diagnóstico correcto de APLV es un proceso que requiere "
+"paciencia y la guía de un especialista. No existen pruebas únicas "
+"definitivas, sino una combinación de métodos."
+msgstr ""
+
+#: backend/templates/diagnostico.html:26
+msgid "Historial Médico y Examen"
+msgstr ""
+
+#: backend/templates/diagnostico.html:27
+msgid ""
+"El primer paso es una revisión detallada de los síntomas, antecedentes "
+"familiares y patrones de alimentación."
+msgstr ""
+
+#: backend/templates/diagnostico.html:37
+msgid "Pruebas Específicas"
+msgstr ""
+
+#: backend/templates/diagnostico.html:38
+msgid ""
+"Se pueden realizar pruebas cutáneas (Prick Test), parches o análisis de "
+"sangre para medir anticuerpos IgE."
+msgstr ""
+
+#: backend/templates/diagnostico.html:48
+msgid "Dieta de Exclusión"
+msgstr ""
+
+#: backend/templates/diagnostico.html:49
+msgid ""
+"Si se sospecha APLV, se retira totalmente la proteína de la leche de vaca de "
+"la dieta (del niño o de la madre si amamanta) por 2-4 semanas."
+msgstr ""
+
+#: backend/templates/diagnostico.html:59
+msgid "Prueba de Provocación"
+msgstr ""
+
+#: backend/templates/diagnostico.html:60
+msgid "Bajo estricta supervisión médica"
+msgstr ""
+
+#: backend/templates/diagnostico.html:61
+msgid ""
+"Consiste en reintroducir gradualmente la leche para confirmar si los "
+"síntomas reaparecen. Es la prueba de oro para el diagnóstico."
+msgstr ""
+
+#: backend/templates/diagnostico.html:69
+msgid ""
+"Importante: Nunca realice una prueba de provocación en casa sin indicación "
+"médica, especialmente si ha habido antecedentes de reacciones severas."
+msgstr ""
+
+#: backend/templates/directorio.html:4
+msgid "Directorio de Especialistas en Alergias Alimentarias - Mundo APLV"
+msgstr ""
+
+#: backend/templates/directorio.html:5
+msgid ""
+"Encuentra pediatras, alergistas y nutricionistas especializados en APLV para "
+"un seguimiento profesional y seguro."
+msgstr ""
+
+#: backend/templates/directorio.html:10 backend/templates/index.html:130
+#, fuzzy
+#| msgid "🏥 Directorio Médico"
+msgid "Directorio Médico"
+msgstr "🏥 Medical Directory"
+
+#: backend/templates/directorio.html:14
+msgid ""
+"El seguimiento multidisciplinario es la clave del éxito. Aquí te ayudamos a "
+"identificar a los profesionales que tu hijo necesita."
+msgstr ""
+
+#: backend/templates/directorio.html:22
+msgid "Alergista e Inmunólogo"
+msgstr ""
+
+#: backend/templates/directorio.html:23
+msgid ""
+"Especialista en realizar las pruebas cutáneas y de sangre, y dirigir la "
+"prueba de provocación."
+msgstr ""
+
+#: backend/templates/directorio.html:30
+msgid "Nutricionista Especializado"
+msgstr ""
+
+#: backend/templates/directorio.html:31
+msgid ""
+"Asegura que la dieta de exclusión sea nutricionalmente completa para evitar "
+"deficiencias de crecimiento."
+msgstr ""
+
+#: backend/templates/directorio.html:38
+msgid "Pediatra de Cabecera"
+msgstr ""
+
+#: backend/templates/directorio.html:39
+msgid "Coordina el cuidado general y monitorea el desarrollo físico del niño."
+msgstr ""
+
+#: backend/templates/directorio.html:46
+msgid ""
+"Próximamente: Estamos trabajando en un directorio geolocalizado para "
+"ayudarte a encontrar centros de salud en tu ciudad."
+msgstr ""
+
+#: backend/templates/escaner.html:6
+msgid "Escáner de Productos APLV"
+msgstr "APLV Product Scanner"
+
+#: backend/templates/escuelas.html:6
+msgid "APLV en la Escuela y Jardines"
+msgstr "APLV at School and Daycare"
+
+#: backend/templates/etiquetas.html:6
+msgid "Guía de Lectura de Etiquetas"
+msgstr "Label Reading Guide"
+
+#: backend/templates/familia.html:6
+msgid "Información para Familias y Cuidadores"
+msgstr "Information for Families and Caregivers"
+
+#: backend/templates/index.html:9
+msgid "Mundo APLV"
+msgstr "Mundo APLV"
+
+#: backend/templates/index.html:12
+msgid ""
+"Tu guía completa sobre la <span class=\"text-primary font-semibold\">Alergia "
+"a la Proteína de la Leche de Vaca</span>. Información confiable, recursos "
+"útiles y apoyo para familias."
+msgstr ""
+
+#: backend/templates/index.html:16
+msgid "Aprende Más"
+msgstr "Learn More"
+
+#: backend/templates/index.html:30
+msgid ""
+"En caso de reacción alérgica severa, contacta inmediatamente a servicios de "
+"emergencia"
+msgstr ""
+"In case of severe allergic reaction, contact emergency services immediately"
+
+#: backend/templates/index.html:37
+#, fuzzy
+#| msgid "Recursos y Herramientas"
+msgid "Recursos Esenciales"
+msgstr "Resources and Tools"
+
+#: backend/templates/index.html:44
+#, fuzzy
+#| msgid ""
+#| "Los síntomas pueden incluir erupciones cutáneas, problemas digestivos, "
+#| "vómitos, diarrea, y en casos severos, anafilaxia. La identificación "
+#| "temprana es crucial."
+msgid ""
+"Los síntomas pueden incluir erupciones cutáneas, problemas digestivos, "
+"vómitos, diarrea, y en casos severos, anafilaxia."
+msgstr ""
+"Symptoms can include skin rashes, digestive problems, vomiting, diarrhea, "
+"and in severe cases, anaphylaxis. Early identification is crucial."
+
+#: backend/templates/index.html:47 backend/templates/index.html:59
+#: backend/templates/index.html:71 backend/templates/index.html:83
+msgid "Más Info"
+msgstr "More Info"
+
+#: backend/templates/index.html:56
+#, fuzzy
+#| msgid ""
+#| "El diagnóstico debe realizarse por un profesional de la salud mediante "
+#| "pruebas específicas, historial médico y, en algunos casos, pruebas de "
+#| "provocación controlada."
+msgid ""
+"El diagnóstico debe realizarse por un profesional de la salud mediante "
+"pruebas específicas e historial médico."
+msgstr ""
+"Diagnosis should be performed by a healthcare professional using specific "
+"tests, medical history, and, in some cases, controlled provocation tests."
+
+#: backend/templates/index.html:66
+msgid "Alimentos"
+msgstr ""
+
+#: backend/templates/index.html:68
+msgid ""
+"Guía detallada sobre alimentos seguros y cómo leer etiquetas para evitar "
+"trazas de leche."
+msgstr ""
+
+#: backend/templates/index.html:78
+msgid "Recetas"
+msgstr ""
+
+#: backend/templates/index.html:80
+msgid ""
+"Descubre deliciosas opciones libres de lácteos para que tu familia disfrute "
+"de una dieta variada."
+msgstr ""
+
+#: backend/templates/index.html:92
 msgid "Información Clave sobre APLV"
 msgstr "Key Information about CMPA"
 
-msgid "La APLV es una de las alergias alimentarias más comunes en la infancia, pero con el manejo adecuado, la mayoría de los niños pueden llevar una vida normal y saludable."
-msgstr "CMPA is one of the most common food allergies in childhood, but with proper management, most children can lead a normal and healthy life."
+#: backend/templates/index.html:94
+msgid ""
+"La APLV es una de las alergias alimentarias más comunes en la infancia, pero "
+"con el manejo adecuado, la mayoría de los niños pueden llevar una vida "
+"normal y saludable."
+msgstr ""
+"CMPA is one of the most common food allergies in childhood, but with proper "
+"management, most children can lead a normal and healthy life."
 
+#: backend/templates/index.html:100
 msgid "Prevalencia"
 msgstr "Prevalence"
 
-msgid "Afecta al 2-3% de los bebés"
+#: backend/templates/index.html:101
+#, fuzzy, python-format
+#| msgid "Afecta al 2-3% de los bebés"
+msgid "Afecta al 2-3%% de los bebés"
 msgstr "Affects 2-3% of babies"
 
+#: backend/templates/index.html:104
 msgid "Edad de Inicio"
 msgstr "Onset Age"
 
-msgid "Típicamente en los primeros meses de vida"
+#: backend/templates/index.html:105
+#, fuzzy
+#| msgid "Típicamente en los primeros meses de vida"
+msgid "Típicamente en los primeros meses"
 msgstr "Typically in the first months of life"
 
+#: backend/templates/index.html:108
 msgid "Pronóstico"
 msgstr "Prognosis"
 
-msgid "80% supera la alergia antes de los 5 años"
+#: backend/templates/index.html:109
+#, fuzzy, python-format
+#| msgid "80% supera la alergia antes de los 5 años"
+msgid "80%% lo supera antes de los 5 años"
 msgstr "80% outgrow the allergy before age 5"
 
+#: backend/templates/index.html:112
 msgid "Tipos"
 msgstr "Types"
 
-msgid "IgE mediada y no IgE mediada"
+#: backend/templates/index.html:113
+#, fuzzy
+#| msgid "IgE mediada y no IgE mediada"
+msgid "IgE y No IgE mediada"
 msgstr "IgE mediated and non-IgE mediated"
 
-msgid "Recursos y Herramientas"
-msgstr "Resources and Tools"
+#: backend/templates/index.html:121
+msgid "¿Necesitas apoyo?"
+msgstr ""
 
-msgid "📋 Lista de Alimentos Permitidos"
-msgstr "📋 List of Allowed Foods"
+#: backend/templates/index.html:123
+msgid ""
+"Unirse a una comunidad puede marcar la diferencia. Encuentra grupos de apoyo "
+"y especialistas cerca de ti."
+msgstr ""
 
-msgid "🍽️ Recetas Sin Lácteos"
-msgstr "🍽️ Dairy-Free Recipes"
-
-msgid "🏥 Directorio Médico"
-msgstr "🏥 Medical Directory"
-
-msgid "👥 Grupo de Apoyo"
+#: backend/templates/index.html:127
+#, fuzzy
+#| msgid "👥 Grupo de Apoyo"
+msgid "Grupo de Apoyo"
 msgstr "👥 Support Group"
 
-msgid "Volver al Inicio"
-msgstr "Back to Home"
+#: backend/templates/que-es-aplv.html:4
+msgid "¿Qué es la APLV? Guía completa para padres - Mundo APLV"
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:5
+msgid ""
+"Entiende la Alergia a la Proteína de la Leche de Vaca: causas, tipos de "
+"reacciones (IgE y No-IgE) y cómo afecta a los lactantes."
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:10
+#, fuzzy
+#| msgid "¿Qué es APLV?"
+msgid "¿Qué es la APLV?"
+msgstr "What is CMPA?"
+
+#: backend/templates/que-es-aplv.html:14
+msgid ""
+"La Alergia a la Proteína de la Leche de Vaca (APLV) es una respuesta anormal "
+"del sistema inmunitario. En los niños que la padecen, las defensas del "
+"cuerpo identifican erróneamente a las proteínas de la leche como sustancias "
+"dañinas (alérgenos)."
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:19
+msgid ""
+"¿Sabías que la APLV no es lo mismo que la intolerancia a la lactosa? "
+"Mientras la intolerancia es un problema digestivo (falta de una enzima), la "
+"APLV es un problema del sistema inmunológico."
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:23
+msgid "Tipos de Reacciones"
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:25
+msgid "Existen dos tipos principales dependiendo de cómo reacciona el cuerpo:"
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:29
+msgid "Mediada por IgE:"
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:29
+msgid ""
+"Los síntomas aparecen casi inmediatamente (segundos a minutos) después de la "
+"ingesta. Puede causar urticaria, hinchazón o anafilaxia."
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:32
+msgid "No mediada por IgE:"
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:32
+msgid ""
+"Los síntomas son tardíos (horas o días después). Suele afectar "
+"principalmente al sistema digestivo (vómitos, diarrea, sangre en heces)."
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:37
+msgid "Dato Clave"
+msgstr ""
+
+#: backend/templates/que-es-aplv.html:39
+msgid ""
+"Es la alergia alimentaria más frecuente en los primeros meses de vida, "
+"afectando a lactantes tanto con lactancia materna como con fórmula."
+msgstr ""
+
+#: backend/templates/recetas.html:4
+msgid "Recetas Sin Lácteos y Seguras para APLV - Mundo APLV"
+msgstr ""
+
+#: backend/templates/recetas.html:5
+msgid ""
+"Cocina delicioso y seguro. Descubre nuestra selección de recetas libres de "
+"proteína de leche de vaca para toda la familia."
+msgstr ""
+
+#: backend/templates/recetas.html:10
+#, fuzzy
+#| msgid "🍽️ Recetas Sin Lácteos"
+msgid "Cocina Sin Lácteos"
+msgstr "🍽️ Dairy-Free Recipes"
+
+#: backend/templates/recetas.html:14
+msgid ""
+"Tener APLV no significa renunciar al sabor. Aquí encontrarás ideas "
+"nutritivas y seguras para el desayuno, almuerzo y merienda."
+msgstr ""
+
+#: backend/templates/recetas.html:22
+msgid "Panqueques de Avena y Banana"
+msgstr ""
+
+#: backend/templates/recetas.html:24
+msgid "15 min"
+msgstr ""
+
+#: backend/templates/recetas.html:25
+msgid "Sin Huevo"
+msgstr ""
+
+#: backend/templates/recetas.html:28
+msgid ""
+"Una opción deliciosa y fácil para comenzar el día, utilizando bebida de "
+"arroz o coco."
+msgstr ""
+
+#: backend/templates/recetas.html:30 backend/templates/recetas.html:44
+#: backend/templates/recetas.html:58
+msgid "Ver Receta Completa"
+msgstr ""
+
+#: backend/templates/recetas.html:36
+msgid "Crema de Verduras con Coco"
+msgstr ""
+
+#: backend/templates/recetas.html:38
+msgid "30 min"
+msgstr ""
+
+#: backend/templates/recetas.html:39
+msgid "Vegano"
+msgstr ""
+
+#: backend/templates/recetas.html:42
+msgid ""
+"Sustituimos la crema de leche por leche de coco para lograr una textura "
+"cremosa y nutritiva."
+msgstr ""
+
+#: backend/templates/recetas.html:50
+msgid "Muffins de Manzana y Canela"
+msgstr ""
+
+#: backend/templates/recetas.html:52
+msgid "45 min"
+msgstr ""
+
+#: backend/templates/recetas.html:53
+msgid "Sin Trigo"
+msgstr ""
+
+#: backend/templates/recetas.html:56
+#, python-format
+msgid ""
+"Merienda perfecta para llevar. Usamos margarina vegetal 100%% libre de "
+"lácteos."
+msgstr ""
+
+#: backend/templates/recetas.html:64
+msgid "Consejo de Cocina:"
+msgstr ""
+
+#: backend/templates/recetas.html:64
+msgid ""
+"Muchos productos como margarinas o caldos pueden contener trazas de leche. "
+"Siempre verifica el sello de seguridad en el empaque."
+msgstr ""
+
+#: backend/templates/sintomas.html:4
+msgid "Síntomas de APLV: Cómo identificarlos - Mundo APLV"
+msgstr ""
+
+#: backend/templates/sintomas.html:5
+msgid ""
+"Aprende a reconocer los síntomas de la Alergia a la Proteína de la Leche de "
+"Vaca: desde reacciones cutáneas hasta problemas digestivos severos."
+msgstr ""
+
+#: backend/templates/sintomas.html:7
+msgid "Síntomas de APLV - Guía de Identificación"
+msgstr ""
+
+#: backend/templates/sintomas.html:8
+msgid "Guía detallada sobre los síntomas IgE y No-IgE mediados de la APLV."
+msgstr ""
+
+#: backend/templates/sintomas.html:13
+#, fuzzy
+#| msgid "Síntomas"
+msgid "Síntomas de APLV"
+msgstr "Symptoms"
+
+#: backend/templates/sintomas.html:17
+msgid ""
+"La Alergia a la Proteína de la Leche de Vaca puede manifestarse de diversas "
+"formas. La identificación temprana es crucial para iniciar el tratamiento "
+"adecuado y evitar complicaciones."
+msgstr ""
+
+#: backend/templates/sintomas.html:25
+#, fuzzy
+#| msgid "Síntomas"
+msgid "Síntomas Cutáneos"
+msgstr "Symptoms"
+
+#: backend/templates/sintomas.html:27
+msgid "Erupciones cutáneas o urticaria"
+msgstr ""
+
+#: backend/templates/sintomas.html:28
+msgid "Dermatitis atópica"
+msgstr ""
+
+#: backend/templates/sintomas.html:29
+msgid "Hinchazón de labios o párpados (angioedema)"
+msgstr ""
+
+#: backend/templates/sintomas.html:36
+#, fuzzy
+#| msgid "Síntomas"
+msgid "Síntomas Digestivos"
+msgstr "Symptoms"
+
+#: backend/templates/sintomas.html:38
+msgid "Vómitos o regurgitaciones frecuentes"
+msgstr ""
+
+#: backend/templates/sintomas.html:39
+msgid "Diarrea o estreñimiento"
+msgstr ""
+
+#: backend/templates/sintomas.html:40
+msgid "Cólicos intensos o irritabilidad constante"
+msgstr ""
+
+#: backend/templates/sintomas.html:41
+msgid "Sangre o mucosidad en las deposiciones"
+msgstr ""
+
+#: backend/templates/sintomas.html:48
+msgid "Síntomas Respiratorios"
+msgstr ""
+
+#: backend/templates/sintomas.html:49
+msgid "Atención: Requieren evaluación urgente"
+msgstr ""
+
+#: backend/templates/sintomas.html:51
+msgid "Sibilancias (silbidos al respirar)"
+msgstr ""
+
+#: backend/templates/sintomas.html:52
+msgid "Tos crónica"
+msgstr ""
+
+#: backend/templates/sintomas.html:53
+msgid "Dificultad para respirar"
+msgstr ""
+
+#: backend/templates/sintomas.html:59
+msgid "Anafilaxia: Emergencia Médica"
+msgstr ""
+
+#: backend/templates/sintomas.html:60
+msgid ""
+"En casos severos, puede ocurrir una reacción alérgica grave que afecta a "
+"todo el organismo. Si nota dificultad respiratoria súbita o desmayo, busque "
+"ayuda inmediata."
+msgstr ""
+
+#: backend/templates/tipos.html:6
+msgid "Tipos de Alergia APLV"
+msgstr "Types of APLV Allergy"
+
+#~ msgid ""
+#~ "La Alergia a la Proteína de la Leche de Vaca es una reacción inmunológica "
+#~ "adversa a las proteínas presentes en la leche de vaca, afectando "
+#~ "principalmente a bebés y niños pequeños."
+#~ msgstr ""
+#~ "Cow's Milk Protein Allergy is an adverse immune reaction to proteins "
+#~ "present in cow's milk, mainly affecting babies and young children."
+
+#~ msgid "Alternativas"
+#~ msgstr "Alternatives"
+
+#~ msgid ""
+#~ "Existen múltiples opciones como fórmulas hidrolizadas, leches vegetales "
+#~ "fortificadas y productos libres de lácteos para mantener una nutrición "
+#~ "adecuada."
+#~ msgstr ""
+#~ "There are multiple options such as hydrolyzed formulas, fortified plant-"
+#~ "based milks, and dairy-free products to maintain proper nutrition."
+
+#~ msgid "📋 Lista de Alimentos Permitidos"
+#~ msgstr "📋 List of Allowed Foods"

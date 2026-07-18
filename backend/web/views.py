@@ -41,3 +41,27 @@ def directorio(request):
 def apoyo(request):
     """View for the Support Group page."""
     return render(request, 'apoyo.html')
+
+def tipos(request):
+    """View for the Types of Allergy page."""
+    return render(request, 'tipos.html')
+
+def etiquetas(request):
+    """View for the Labels guide page."""
+    return render(request, 'etiquetas.html')
+
+def escuelas(request):
+    """View for the Schools/Educators page."""
+    return render(request, 'escuelas.html')
+
+def familia(request):
+    """View for the Family and Caregivers page."""
+    return render(request, 'familia.html')
+
+def comunidad(request):
+    """View for the Community forum page."""
+    return render(request, 'comunidad.html')
+
+def escaner(request):
+    """View for the Product Scanner page."""
+    return render(request, 'escaner.html')
