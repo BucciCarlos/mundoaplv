@@ -5,8 +5,8 @@ env/
 
 # Variables de entorno y secretos
 .env
-.env.local
-.env.production
+.env.*
+!.env.example
 
 # Archivos compilados de Python
 __pycache__/
