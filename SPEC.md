@@ -4,10 +4,10 @@
 Mundo APLV es una plataforma educativa y de soporte orientada a familias de niños con Alergia a la Proteína de la Leche de Vaca (APLV) y otras alergias alimentarias. Creada "de padres para padres", la plataforma traduce términos médicos a un lenguaje accesible, sin paywalls ni barreras económicas, con el fin de reducir la curva de aprendizaje tras el diagnóstico. Toda información médica provista advierte explícitamente que no reemplaza el consejo de un profesional de la salud.
 
 ## 2. Pila Tecnológica (Stack)
-* **Backend:** Django 4.2 LTS (Monolito para el MVP, preparado para API Headless).
+* **Backend:** Django 5.2 LTS (Monolito para el MVP, preparado para API Headless).
 * **Frontend:** Tailwind CSS, Django Templates (Server-Side Rendering para SEO óptimo).
 * **Base de Datos:** SQLite (Desarrollo) -> PostgreSQL (Producción) con extensión `pgvector`.
-* **Entorno:** Linux Ubuntu nativo, Python 3.
+* **Entorno:** Linux Ubuntu nativo, Python 3.12.3.
 
 ## 3. Arquitectura de Datos (Módulos Base)
 La lógica de negocio reside en `backend/apps/`:

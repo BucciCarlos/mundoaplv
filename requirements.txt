@@ -1,7 +1,10 @@
-django>=4.2,<5.0
-django-ninja
-psycopg2-binary
-python-dotenv
-django-modeltranslation
-dj-database-url
-gunicorn
+# Runtime dependencies
+Django==5.2.17
+dj-database-url==3.1.2
+gunicorn==26.2.0
+psycopg2-binary==2.9.13
+python-dotenv==1.2.3
+
+# Django transitive dependencies, pinned for reproducible installs
+asgiref==3.10.0
+sqlparse==0.5.3
