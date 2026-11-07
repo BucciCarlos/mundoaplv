@@ -4,10 +4,10 @@
 Mundo APLV es una plataforma educativa y de soporte orientada a familias de niños con Alergia a la Proteína de la Leche de Vaca (APLV) y otras alergias alimentarias. Creada "de padres para padres", la plataforma traduce términos médicos a un lenguaje accesible, sin paywalls ni barreras económicas, con el fin de reducir la curva de aprendizaje tras el diagnóstico. Toda información médica provista advierte explícitamente que no reemplaza el consejo de un profesional de la salud.
 
 ## 2. Pila Tecnológica (Stack)
-* **Backend:** Django 4.2 LTS (Monolito para el MVP, preparado para API Headless).
+* **Backend:** Django 5.2 LTS (Monolito para el MVP, preparado para API Headless).
 * **Frontend:** Tailwind CSS, Django Templates (Server-Side Rendering para SEO óptimo).
 * **Base de Datos:** SQLite (Desarrollo) -> PostgreSQL (Producción) con extensión `pgvector`.
-* **Entorno:** Linux Ubuntu nativo, Python 3.
+* **Entorno:** Linux Ubuntu nativo, Python 3.12.3.
 
 ## 3. Arquitectura de Datos (Módulos Base)
 La lógica de negocio reside en `backend/apps/`:
@@ -34,3 +34,20 @@ La lógica de negocio reside en `backend/apps/`:
 ### Fase 3: Integración de Inteligencia Artificial - Futuro
 * **Escáner de Etiquetas:** Procesamiento de imágenes (OCR) para identificar "nombres ocultos" de alérgenos en ingredientes según normativa local.
 * **Chatbot RAG (Retrieval-Augmented Generation):** Implementación de una base de datos vectorial (`pgvector` en PostgreSQL) combinada con LLMs mediante `django-ninja` usando controladores asíncronos (`async def`) para evitar bloquear el hilo principal. La IA responderá consultas basándose estrictamente en el corpus de conocimiento validado de la plataforma para asegurar precisión médica y evitar alucinaciones.
+
+## 5. Ejecución local con settings de producción
+
+Desde `backend/`, definir variables temporales seguras y una `DATABASE_URL` explícita. Para una comprobación local no persistente se puede usar `sqlite://:memory:`.
+
+```bash
+export DJANGO_SETTINGS_MODULE=core.settings.production
+export DJANGO_SECRET_KEY='<clave-aleatoria-de-al-menos-50-caracteres>'
+export DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
+export DJANGO_CSRF_TRUSTED_ORIGINS=https://localhost
+export DATABASE_URL=sqlite://:memory:
+
+python manage.py collectstatic --noinput
+./start-production.sh
+```
+
+El script de arranque ejecuta `gunicorn core.wsgi:application` y usa `PORT` si está definido, o el puerto `8000` localmente. Production requiere sus variables en el entorno del proceso; no carga `backend/.env`.

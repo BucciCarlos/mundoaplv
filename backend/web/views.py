@@ -1,6 +1,11 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
+from django.http import JsonResponse
+
+
+def health_check(request):
+    """Minimal process health check without external dependencies."""
+    return JsonResponse({'status': 'ok'})
 
 def robots_txt(request):
     """View for robots.txt."""
